@@ -1,0 +1,75 @@
+.g1 {
+    padding: 15px 0 0 47px;
+    width: 123px;
+    height: 19px;
+    display: block;
+}
+
+.i-b {
+    display: inline-block;
+}
+
+.n1 {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-left: 9px;
+}
+
+.g1:hover {
+    background: none;
+    color: grey;
+    border-left: none;
+}
+
+.page-2 {
+    height: 664px;
+    width: 532px;
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+.d-record {
+    width: 475px;
+    height: 174px;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px #EBE7FF;
+    border-radius: 5px;
+    margin: 15px 20px;
+}
+
+.cal-1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0 0 35px;
+}
+
+.cal {
+    width: 573px;
+    height: 481px;
+    border-radius: 5px;
+    border: 1px solid #EBE7FF;
+    background: black;
+}
+
+/* scroll */
+.page-2::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.page-2::-webkit-scrollbar-track {
+    background: #EBE7FF;
+    height: 645px;
+    border-radius: 5px;
+
+}
+
+.page-2::-webkit-scrollbar-thumb {
+    background: #003B72;
+    border-radius: 5px;
+    min-height: 174px;
+}
