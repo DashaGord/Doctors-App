@@ -29,7 +29,7 @@ const PageOne = ({data}) => {
                         <img src="icons/bell.png" className="mask-group-1 m-12"/>
                         <img src="icons/eye.png" className="mask-group-1 m-12"/>
                         <img src="icons/profile.png" className="mask-group-2 m-12"/>
-                        <img src="icons/open.png" className="mask-group-1"/>
+                        <img src="icons/open.png" className="mask-group-1 p-2"/>
                     </div>
                 </div>
                 <div className="text-records">Записи на прием</div>

@@ -3,7 +3,8 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../styles.css'
 import {useEffect, useState} from "react";
-import {parse} from 'date-format-parse';
+import {format, parse} from 'date-format-parse';
+
 
 const PageTwo = ({data, recordDatesMap}) => {
     const currentDate = new Date();
@@ -19,7 +20,7 @@ const PageTwo = ({data, recordDatesMap}) => {
         }
     }).map(items => {
         return (
-            <div className="doctor-record">
+            <div className="d-record">
                 <h1 className="p-20">{items.data} | {items.time} </h1>
                 <div className="jk">{items.clinicName}, {items.address}</div>
                 <div className="photo-doctor">
@@ -71,7 +72,7 @@ const PageTwo = ({data, recordDatesMap}) => {
                         <img src="icons/bell.png" className="mask-group-1 m-12"/>
                         <img src="icons/eye.png" className="mask-group-1 m-12"/>
                         <img src="icons/profile.png" className="mask-group-2 m-12"/>
-                        <img src="icons/open.png" className="mask-group-1"/>
+                        <img src="icons/open.png" className="mask-group-1 p-2"/>
                     </div>
                 </div>
 
@@ -79,6 +80,10 @@ const PageTwo = ({data, recordDatesMap}) => {
                     <div className="i-b"><img src="icons/arrow.png"/></div>
                     <div className="n1">Мои записи</div>
                 </a>
+                <a href=''>
+                    {selected && <div  className="button-all" onClick={e => setSelected(false)}>Показать все записи</div>}
+                </a>
+
 
                 <div className="page-2">
                     {elements}
@@ -99,6 +104,8 @@ const PageTwo = ({data, recordDatesMap}) => {
                               next2Label={null}
 
                               minDate={currentDate}
+
+                              formatMonthYear={(locale, date) => format(date, 'MMMM YYYY', { locale: localeObj })}
 
                               onActiveStartDateChange={({activeStartDate}) => {
 
@@ -121,5 +128,22 @@ const PageTwo = ({data, recordDatesMap}) => {
         </section>
     );
 };
+
+const localeObj = {
+    months: [
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь'
+    ]
+}
 
 export default PageTwo;

@@ -73,3 +73,15 @@
     border-radius: 5px;
     min-height: 174px;
 }
+.button-all{
+    margin-left: 334px;
+    border: none;
+    background: none;
+    width: 150px;
+    color: #50CAFF;;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
